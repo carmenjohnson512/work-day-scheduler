@@ -79,8 +79,7 @@
           scheduler.insertAdjacentHTML('beforeend', schedule_template(h))
         };
 
-        // Logic to save the data:
-        // On textarea blur Event - save the data by reading the data-h value
+        // Logic to save the data: On textarea blur Event - save the data by reading the data-h value
         const save = ev => {
           const h = ev.target.getAttribute('data-h');  // Get the hour
           savedScheduleData[h] = ev.target.value;                     // Update Object 
