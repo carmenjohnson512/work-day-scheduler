@@ -1,4 +1,4 @@
-#### Carmen Johnson | Work Day Scheduler
+# Carmen Johnson | Work Day Scheduler
 
 Email: carmenjohnson512@gmail.com | LinkedIn: https://www.linkedin.com/in/carmenjohnson512/
 
