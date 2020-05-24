@@ -1,8 +1,9 @@
-# 05 Third-Party APIs: Work Day Scheduler
+#### Carmen Johnson | Work Day Scheduler
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Email: carmenjohnson512@gmail.com | LinkedIn: https://www.linkedin.com/in/carmenjohnson512/
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+![workday scheduler](https://github.com/carmenjohnson512/work-day-scheduler/blob/master/Assets/workday_scheduler_screenshot.jpg?raw=true)
+
 
 ## User Story
 
@@ -12,35 +13,12 @@ I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
 
-## Acceptance Criteria
+## App Functionality
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
 
-The following animation demonstrates the application functionality:
+This is a daily planner that displays the current date and time at the top of the calendar. <br>
+Below the date and time are (8) timeblocks for the standard business hours of 9:00 am to 5:00 pm. <br>
+When you view the timeblocks for the current day, each timeblock is color coded to indicate whether it is in the past, present, or future. <br>
+When you click into a timeblock, you can enter an event or "to do" item, and click the "save" button for that timeblock to save the event to local storage. <br>
+When the page is refreshed, the saved events persist. To delete an entry, simply clear the input field and press "save" again.
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
