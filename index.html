@@ -53,6 +53,7 @@
       };
       showTime();
       setInterval(showTime, 1000);
+      // console.log("is this updating time?", setInterval)
 
         // 1.5 pastEvent = function() --> variable that defines past event functionality
         // 1.6 currentEvent = function() --> variable that defines current event functionality
@@ -79,7 +80,7 @@
           scheduler.insertAdjacentHTML('beforeend', schedule_template(h))
         };
 
-        // Logic to save the data: On textarea blur Event - save the data by reading the data-h value
+        // Logic to save the data: On click Event - save the data by reading the data-h value
         const save = ev => {
           const h = ev.target.getAttribute('data-h');  // Get the hour
           savedScheduleData[h] = ev.target.value;                     // Update Object 
@@ -87,8 +88,26 @@
         };
 
         scheduler.querySelectorAll('.schedule-desc').forEach(el => {
-          el.addEventListener('blur', save);
+          el.addEventListener('click', save);
         });
+
+        // logic to color code past, present and future events
+        let eventColor =  function () {
+        // const h = savedScheduleData.getAttribute('data-h');
+        // let currentTime = ampm(h);
+        if (from < time && to > time) {
+            //past event
+            schedule_template.css('background-color', '#FFB347');
+        } else if (from < time && to <= time) {
+            //current event
+            schedule_template.css('background-color', '#77DD77');
+        } else if (from > time && to > time) {
+            //future event
+            schedule_template.css('background-color', '#AEC6CF');
+        }
+    };
+    eventColor();
+    console.log("is eventColor function working?", eventColor)
       
     });
     </script>
