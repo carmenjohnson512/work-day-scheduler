@@ -26,7 +26,8 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDayTime" class="lead"></p>
+      <p id="currentDate" class="lead"></p>
+      <p id="currentTime" class="lead"></p>
     </header>
     <div class="scheduler">
       <!-- Timeblocks go here -->
@@ -35,59 +36,32 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script> 
-
-      // let dateTime = null;
-      // let date = null;
-
-      // let showDateTime = function() {
-      //   date = moment(new Date()).datetime.html(date.format("dddd, MMMM Do YYYY h:mm:ss a"));
-      // }
     
     $(document).ready(function() {
-      // let dateTime = null;
-      // let date = null;
-
-      // let showDateTime = function() {
-      //   date = moment(new Date()).datetime.html(date.format("dddd, MMMM Do YYYY h:mm:ss a"));
-      // }
-
-      // dateTime = $("currentDayTime");
-      // showDateTime();
-      // setInterval(update, 1000);
     
 
       let date = moment().format("dddd, MMMM Do YYYY"); // today's date in default time
       let time = moment().format("h:mm:ss a");
-      let showDateTime = $("#currentDayTime").html(date + " " + time);
-       
-      let updateDateTime = function() {
-        showDateTime.setInterval(time, 1000);
+      // let showDateTime = $("#currentDayTime").html(date + " " + time);
+      let showDate = function(){
+        $("#currentDate").html(date);
       };
-      updateDateTime;
-      console.log("what are you doing?", updateDateTime)
-      // updateDateTime();
-      // console.log("what is this doing?", updateDateTime)
+      showDate();
       
-      // let showDateTime = function() {
-      //   $("#currentDayTime").html(dateTime);
-      //   setInterval(dateTime, 1000);
+      let showTime = function(){
+        $("#currentTime").html(time);
+      };
+      showTime();
+      setInterval(showTime, 1000);
 
-      // } 
-      // showDateTime;
         // 1.5 pastEvent = function() --> variable that defines past event functionality
         // 1.6 currentEvent = function() --> variable that defines current event functionality
         // 1.7 futureEvent = function() --> variable that defines future event functionality
-        
-      
-      // let dateTime = moment().format("LLLL"); // today's date in local time!
-      // let dateTime = moment().format("LTS"); // today's date in local time!
       
       const from = 9;   // use 24h format here
       const to   = 17;  // use 24h format here
 
-     
-
-      // Use window.localStorage to retrieve and store your data object as string
+      // Use window.localStorage to retrieve and store data object as string
       const savedScheduleData = JSON.parse(localStorage.scheduler||'{}'); // now an Object
 
       const scheduler = document.querySelector('.scheduler');
