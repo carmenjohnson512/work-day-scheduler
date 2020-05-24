@@ -7,11 +7,7 @@ Email: carmenjohnson512@gmail.com | LinkedIn: https://www.linkedin.com/in/carmen
 
 ## User Story
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+As an employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively.
 
 ## App Functionality
 
